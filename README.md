@@ -26,4 +26,17 @@ poetry init
 poetry install
 ```
 
+### 7. Pycharm: Installing python packages
+
+```sh
+poetry add pytest
+poetry add requests
+
+pip list # or pip3 list
+
+# to share my dependencies
+pip freeze > requirements.txt
+pip install -r requirements.txt
+```
+
 </details>
