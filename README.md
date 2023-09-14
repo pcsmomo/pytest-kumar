@@ -132,4 +132,21 @@ pytest -v py_assertions/test_module01.py::test_a1
 pytest -v py_assertions/test_module02.py::TestMyStuff::test_type
 ```
 
+### 17. About `__init__.py`
+
+we have two `test_module01.py` files under `pytest_topics` and `py_assertions`
+
+if we delete both `__init__.py` files, we recives an error message when `pytest`
+
+```sh
+================================================================= ERRORS ==================================================================
+_____________________________________________ ERROR collecting pytest_topics/test_module01.py _____________________________________________
+import file mismatch:
+imported module 'test_module01' has this __file__ attribute:
+  /Users/noah/Documents/study/study_codes/udemy/pytest-kumar/pytest-kumar-git/01-pytest-101/py_assertions/test_module01.py
+which is not the same as the test file we want to collect:
+  /Users/noah/Documents/study/study_codes/udemy/pytest-kumar/pytest-kumar-git/01-pytest-101/pytest_topics/test_module01.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+```
+
 </details>
