@@ -39,4 +39,21 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
+### 9. Write First Tests & Tests Conventions
+
+[pytest assert](https://docs.pytest.org/en/7.4.x/how-to/assert.html)
+
+```sh
+# ./01-pytest-101
+pytest pytest_topics
+pytest -v pytest_topics
+```
+
+#### Rules
+
+- Name all the test modules with `test_<somename>.py`
+- Name all the test function with `test_<somename>`
+- Test classes should be named `Test<somename>.py`
+- Properly group all the tests into test classes/packages
+
 </details>
