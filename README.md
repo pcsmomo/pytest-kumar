@@ -89,4 +89,27 @@ pytest -s . # displaying print()
 pytest -h | less # help, there are a bunch of options
 ```
 
+## Section 4: Pytest: Assertions and Test Discovery
+
+### 15. Test Class
+
+```sh
+poetry shell
+python
+>>> help(str)
+# Help on class str in module builtins:
+
+# class str(object)
+#  |  str(object='') -> str
+#  |  str(bytes_or_buffer[, encoding[, errors]]) -> str
+#  |
+#  |  Create a new string object from the given object. If encoding or
+```
+
+```sh
+>>> import math
+>>> help(math)
+>>> help(math.sqrt)
+```
+
 </details>
