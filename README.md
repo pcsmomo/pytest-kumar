@@ -64,4 +64,17 @@ ptw .
 ptw -v .
 ```
 
+### 12. Understanding Test Outputs(2/2)
+
+[`.pytest_cache` explanation](https://docs.pytest.org/en/7.4.x/how-to/cache.html)
+
+```sh
+pytest --lf -x .  # stopping after 1 failures
+ptw --lf -x .
+
+# stepwise
+pytest --lf --sw .
+ptw --lf --stepwise .
+```
+
 </details>
