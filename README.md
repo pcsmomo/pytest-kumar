@@ -56,4 +56,12 @@ pytest -v pytest_topics
 - Test classes should be named `Test<somename>.py`
 - Properly group all the tests into test classes/packages
 
+### 10. Running Our Tests
+
+```sh
+poetry add pytest-watcher
+ptw .
+ptw -v .
+```
+
 </details>
