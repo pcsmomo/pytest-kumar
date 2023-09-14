@@ -77,4 +77,16 @@ pytest --lf --sw .
 ptw --lf --stepwise .
 ```
 
+### A. Assignment 1 question
+
+> [Vscode markdown pasting image as default](https://dev.to/francecil/vscode-new-version-179-supports-pasting-images-in-markdown-1fd2)\
+> `{ "markdown.editor.filePaste.enabled": false }`
+
+```sh
+pytest .
+pytest -s . # displaying print()
+
+pytest -h | less # help, there are a bunch of options
+```
+
 </details>
