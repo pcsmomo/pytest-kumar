@@ -112,4 +112,24 @@ python
 >>> help(math.sqrt)
 ```
 
+### 16. Test Discovery
+
+```sh
+# ./01-pytest-101
+
+# run directory
+pytest -v .
+pytest -v py_assertions
+
+# run test file
+pytest -v py_assertions/test_module01.py
+
+# run test class
+pytest -v py_assertions/test_module02.py::TestMyStuff
+
+# run test module
+pytest -v py_assertions/test_module01.py::test_a1
+pytest -v py_assertions/test_module02.py::TestMyStuff::test_type
+```
+
 </details>

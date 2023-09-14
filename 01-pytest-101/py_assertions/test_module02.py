@@ -12,3 +12,11 @@ class TestMyStuff:
     def test_strs(self):
         assert str.upper("python") == "PYTHON"
         assert "pytest".capitalize() == "Pytest"
+
+    class TestNested:
+        def test_nested_test(self):
+            assert 1 == 1
+
+        class TestDoubleNested:
+            def test_double_nested_test(self):
+                assert 1
