@@ -209,4 +209,11 @@ ptw -vs . -m "sanity and str"
 ptw -vs . -m "sanity or str"
 ```
 
+### 25. Marking Tests(3/3)
+
+```py
+# mark for whole module or class
+pytestmark = [pytest.mark.smoke, pytest.mark.strtest]
+```
+
 </details>

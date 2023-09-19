@@ -17,8 +17,10 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 
-[tool.pytest.ini_options]
-markers = [
-    "sanity: marks tests as sanity (deselect with '-m \"not slow\"')",
-    "str"
-]
+# [tool.pytest.ini_options]
+# markers = [
+#     "sanity: marks tests as sanity (deselect with '-m \"not slow\"')",
+#     "str",
+#     "smoke",
+#     "strtest"
+# ]
