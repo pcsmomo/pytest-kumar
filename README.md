@@ -195,4 +195,18 @@ pytest -vs -m sanity
 
 [pytest - registering marks](https://docs.pytest.org/en/stable/how-to/mark.html#registering-marks)
 
+### 24. Marking Tests(2/3)
+
+### mark list
+
+- sanity
+- str
+
+```sh
+ptw -vs . -m "not sanity"
+ptw -vs . -m "sanity and not str"
+ptw -vs . -m "sanity and str"
+ptw -vs . -m "sanity or str"
+```
+
 </details>
