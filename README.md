@@ -10,6 +10,8 @@ Python Automation Testing With Pytest by Kumar S
   - `01-pytest-101/py_assertions`
 - Section 5: Pytest: Skip/Mark and Pytest Options
   - `01-pytest-101/py_skip_mark`
+- Section 6: Pytest: Parameterize and Setup/TearDown Tests(Fixtures)
+  - `01-pytest-101/py_fixture_parameterize`
 
 ## Details
 
