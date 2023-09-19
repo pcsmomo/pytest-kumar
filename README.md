@@ -231,4 +231,20 @@ ptw -vs .
 # test_xfail.py::test_str05 XFAIL
 ```
 
+### 28. Run test by testname (both filename or module name)
+
+```sh
+pytest -k <substring of the file/module name>
+
+# 01-pytest-101/
+pytest -v -k "module"
+
+# --tb : Traceback print mode (auto/long/short/line/native/no)
+pytest -v -k "module" --tb=no
+
+pytest -v -k "str or case" --tb=no
+pytest -v -k "case or xfail" --tb=no
+pytest -v -k "module and not case" --tb=no
+```
+
 </details>
