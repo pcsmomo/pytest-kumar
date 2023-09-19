@@ -218,7 +218,7 @@ pytestmark = [pytest.mark.smoke, pytest.mark.strtest]
 
 ### 26. xfail: Expecting to Fail Marker(1/2)
 
-[pytest xfail][https://docs.pytest.org/en/7.1.x/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail]
+[pytest xfail - assumtion to fail][https://docs.pytest.org/en/7.1.x/how-to/skipping.html#xfail-mark-test-functions-as-expected-to-fail]
 
 similar to raising exception in the test, but `xfail` shows the better labels such as `XFAIL` or `XPASS`
 
