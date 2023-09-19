@@ -346,4 +346,13 @@ def test_usefixturedemo02():
   assert 1 == 1
 ```
 
+### 41. Sharing Fixtures
+
+#### `conftest.py`
+
+- Share fixtures across multiple tests.
+- Can have single `conftest.py` in centralized directory for all test to access the fixtures.
+- Also, can have other `conftest.py` files in subdirectories.
+- It should not be imported by test files.
+
 </details>
