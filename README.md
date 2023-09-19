@@ -182,6 +182,17 @@ pytest -m <markername>
 
 
 # py_skip_mark/test_markers.py
+ptw -vs . -m sanity
+pytest -vs -m sanity
+
+
+# test_markers.py:4
+#   /Users/noah/Documents/study/study_codes/udemy/pytest-kumar/pytest-kumar-git/01-pytest-101/py_skip_mark/test_markers.py:4: PytestUnknownMarkWarning: Unknown pytest.mark.sanity - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+#     @pytest.mark.sanity
+
+# -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 ```
+
+[pytest - registering marks](https://docs.pytest.org/en/stable/how-to/mark.html#registering-marks)
 
 </details>

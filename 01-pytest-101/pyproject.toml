@@ -15,3 +15,9 @@ pytest-watcher = "^0.3.4"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+markers = [
+    "sanity: marks tests as sanity (deselect with '-m \"not slow\"')",
+]
