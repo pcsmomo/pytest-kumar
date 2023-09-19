@@ -316,4 +316,12 @@ pytest --help
 - XPASS (X): The test was not supposed to pass but ran and passed.
 - ERROR (E): An exception happened outside of the test function, in either a fixture.
 
+## Section 6: Pytest: Parameterize and Setup/TearDown Tests(Fixtures)
+
+### 36. Fixture Basics(1/3)
+
+- Fixture: functions that are run by pytest before (and sometimes after) the actual test functions.
+  - Eg. setup DB connection, or initialize webdriver
+- Can put fixtures in individual test files, or, in `conftest.py` for making fixtures available in multiple test files
+
 </details>
