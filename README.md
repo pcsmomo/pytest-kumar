@@ -4,7 +4,12 @@ Python Automation Testing With Pytest by Kumar S
 
 ## Folder structure
 
--
+- Section 3: Pytest 101: Create Project and First Test
+  - `01-pytest-101/pytest_topics`
+- Section 4: Pytest: Assertions and Test Discovery
+  - `01-pytest-101/py_assertions`
+- Section 5: Pytest: Skip/Mark and Pytest Options
+  - `01-pytest-101/py_skip_mark`
 
 ## Details
 
@@ -147,6 +152,27 @@ imported module 'test_module01' has this __file__ attribute:
 which is not the same as the test file we want to collect:
   /Users/noah/Documents/study/study_codes/udemy/pytest-kumar/pytest-kumar-git/01-pytest-101/pytest_topics/test_module01.py
 HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+```
+
+### 22. Skipping Tests
+
+```sh
+ptw -sv .
+```
+
+```sh
+poetry shell
+python
+>>> import sys
+>>> dir(sys)
+['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__', '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__', '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__', '_base_executable', '_clear_type_cache', '_current_exceptions', '_current_frames', '_debugmallocstats', '_framework', '_getframe', '_getquickenedcount', '_git', '_home', '_stdlib_dir', '_xoptions', 'abiflags', 'addaudithook', 'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix', 'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info', 'excepthook', 'exception', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info', 'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth', 'get_int_max_str_digits', 'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags', 'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile', 'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval', 'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info', 'intern', 'is_finalizing', 'maxsize', 'maxunicode', 'meta_path', 'modules', 'orig_argv', 'path', 'path_hooks', 'path_importer_cache', 'platform', 'platlibdir', 'prefix', 'ps1', 'ps2', 'pycache_prefix', 'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'set_int_max_str_digits', 'setdlopenflags', 'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr', 'stdin', 'stdlib_module_names', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info', 'warnoptions']
+
+
+>>> import pytest
+>>> dir(pytest)
+['Cache', 'CallInfo', 'CaptureFixture', 'Class', 'CollectReport', 'Collector', 'Config', 'DoctestItem', 'ExceptionInfo', 'ExitCode', 'File', 'FixtureLookupError', 'FixtureRequest', 'Function', 'HookRecorder', 'Item', 'LineMatcher', 'LogCaptureFixture', 'Mark', 'MarkDecorator', 'MarkGenerator', 'Metafunc', 'Module', 'MonkeyPatch', 'OptionGroup', 'Package', 'Parser', 'PytestAssertRewriteWarning', 'PytestCacheWarning', 'PytestCollectionWarning', 'PytestConfigWarning', 'PytestDeprecationWarning', 'PytestExperimentalApiWarning', 'PytestPluginManager', 'PytestRemovedIn8Warning', 'PytestReturnNotNoneWarning', 'PytestUnhandledCoroutineWarning', 'PytestUnhandledThreadExceptionWarning', 'PytestUnknownMarkWarning', 'PytestUnraisableExceptionWarning', 'PytestWarning', 'Pytester', 'RecordedHookCall', 'RunResult', 'Session', 'Stash', 'StashKey', 'TempPathFactory', 'TempdirFactory', 'TestReport', 'TestShortLogReport', 'Testdir', 'UsageError', 'WarningsRecorder', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__getattr__', '__loader__', '__name__', '__package__', '__path__', '__pytestPDB', '__spec__', '__version__', 'approx', 'cmdline', 'console_main', 'deprecated_call', 'exit', 'fail', 'fixture', 'freeze_includes', 'hookimpl', 'hookspec', 'importorskip', 'main', 'mark', 'param', 'raises', 'register_assert_rewrite', 'set_trace', 'skip', 'version_tuple', 'warns', 'xfail', 'yield_fixture']
+>>> print(pytest.__version__)
+7.4.2
 ```
 
 </details>
