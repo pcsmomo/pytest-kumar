@@ -281,4 +281,28 @@ pytest --collect-only
 
 [pypi pytest-order : a pytest plugin to order test execution](https://pypi.org/project/pytest-order/)
 
+### 30. Pytest Cmd line options(2/2)
+
+```sh
+pytest --lf  # test only previously failed tests
+pytest --ff
+```
+
+```sh
+pytest --help
+
+
+# we can see ini options here as well
+
+# [pytest] ini-options in the first pytest.ini|tox.ini|setup.cfg|pyproject.toml file found:
+
+#   markers (linelist):   Markers for test functions
+#   empty_parameter_set_mark (string):
+#                         Default marker for empty parametersets
+#   norecursedirs (args): Directory patterns to avoid for recursion
+#   testpaths (args):     Directories to search for tests when no files or directories are given on the command line
+#   filterwarnings (linelist):
+#                         Each line specifies a pattern for warnings.filterwarnings. Processed after -W/--pythonwarnings.
+```
+
 </details>
