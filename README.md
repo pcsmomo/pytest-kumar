@@ -357,4 +357,54 @@ def test_usefixturedemo02():
 
 > fixtures can be overriden from test module level
 
+### 42. Tracing Fixture Execution
+
+```sh
+pytest -vs -k test_fixtures03
+pytest -v -k test_fixtures03
+```
+
+```sh
+pytest -vs -k test_fixtures03 --setup-show
+
+# the scope of setup01 is set to `module`
+test_fixtures03.py::test_delItem
+    SETUP    M setup01
+        py_fixtures/test_fixtures03.py::test_delItem (fixtures used: setup01)['mon', 'tue', 'wed']
+PASSED
+test_fixtures03.py::test_removeItem
+        SETUP    F setup02
+        py_fixtures/test_fixtures03.py::test_removeItem (fixtures used: setup02)['thur', 'fri', 'sat', 'sun']
+PASSED
+Fixture setup02 closing
+
+        TEARDOWN F setup02
+Fixture setup02 closing
+
+    TEARDOWN M setup01
+```
+
+```sh
+pytest -vs -k test_fixtures03 --setup-show
+
+# the scope of setup01 is set to default `function`
+test_fixtures03.py::test_delItem
+        SETUP    F setup01
+        py_fixtures/test_fixtures03.py::test_delItem (fixtures used: setup01)['mon', 'tue', 'wed']
+PASSED
+Fixture setup02 closing
+
+        TEARDOWN F setup01
+test_fixtures03.py::test_removeItem
+        SETUP    F setup02
+        py_fixtures/test_fixtures03.py::test_removeItem (fixtures used: setup02)['thur', 'fri', 'sat', 'sun']
+PASSED
+Fixture setup02 closing
+
+        TEARDOWN F setup02
+```
+
+- M: module
+- F: function
+
 </details>
