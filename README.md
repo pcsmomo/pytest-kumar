@@ -175,4 +175,13 @@ python
 7.4.2
 ```
 
+### 23. Grouping/Marking Tests(1/3)
+
+```sh
+pytest -m <markername>
+
+
+# py_skip_mark/test_markers.py
+```
+
 </details>
