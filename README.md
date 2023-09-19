@@ -355,4 +355,6 @@ def test_usefixturedemo02():
 - Also, can have other `conftest.py` files in subdirectories.
 - It should not be imported by test files.
 
+> fixtures can be overriden from test module level
+
 </details>
