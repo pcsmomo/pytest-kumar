@@ -324,4 +324,26 @@ pytest --help
   - Eg. setup DB connection, or initialize webdriver
 - Can put fixtures in individual test files, or, in `conftest.py` for making fixtures available in multiple test files
 
+### 38. Fixture Basics(3/3)
+
+#### two ways to use fixtures
+
+```py
+@pytest.fixture()
+def setup_list():
+    print("\n in fixtures.. setup_list.. \n")
+    city = ["New York", "London", "Riyadh", "Singapore", "Mumbai"]
+    return city
+
+# way 1
+def test_getItem(setup_list):
+  assert setup_list[0] == "New York
+
+
+# way 2
+@pytest.mark.usefixtures("setup_list")
+def test_usefixturedemo02():
+  assert 1 == 1
+```
+
 </details>
