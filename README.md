@@ -247,4 +247,38 @@ pytest -v -k "case or xfail" --tb=no
 pytest -v -k "module and not case" --tb=no
 ```
 
+### 29. Pytest Cmd line options(1/2)
+
+```sh
+pytest --showlocals # show local variables in tracebacks
+pytest -l           # show local variables (shortcut)
+
+pytest --tb=auto    # (default) 'long' tracebacks for the first and last entry,
+                    # but 'short' style for the other entries
+pytest --tb==long   # exhaustive, informative traceback formatting
+pytest --tb==short  # shorter traceback format
+pytest --tb==line   # only one line per failure
+pytest --tb==native # Python standard library formatting
+pytest --tb==no     # no traceback at all
+```
+
+#### exit on failure
+
+```sh
+pytest -x   # exit on the first failure
+pytest --maxfail=2
+
+pytest -q
+```
+
+#### display modules, classes and functions
+
+```sh
+pytest --collect-only
+```
+
+#### if you want to change the testing order
+
+[pypi pytest-order : a pytest plugin to order test execution](https://pypi.org/project/pytest-order/)
+
 </details>
