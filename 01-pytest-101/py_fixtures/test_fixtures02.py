@@ -1,8 +1,11 @@
 import pytest
+import os
 
 
 weekdays1 = ["mon", "tue", "wed"]
 weekdays2 = ["fri", "sat", "sun"]
+
+filename = "file1.txt"
 
 
 @pytest.fixture()
@@ -19,6 +22,17 @@ def setup02():
     yield weekdays2
 
 
+@pytest.fixture()
+def setup03():
+    f = open(filename, "w")
+    f.write("Pytest is good")
+    f.close()
+    f = open(filename, "r+")
+    yield f
+    f.close()
+    os.remove(filename)
+
+
 def test_extendList(setup01):
     print()
     print("weekdays1: ", weekdays1)
@@ -32,3 +46,7 @@ def test_len(setup01, setup02):
     # eventually weekday1 and setup01 is the same object
     # and setup02 and weekdays2 are the same
     assert len(weekdays1 + setup02) == len(setup01 + weekdays2)
+
+
+def test_filetest(setup03):
+    assert (setup03.readline()) == "Pytest is good"
