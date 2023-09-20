@@ -35,3 +35,14 @@ def setup04(request):
     mon = getattr(request.module, "months")
     mon.append("April")
     yield mon
+
+
+@pytest.fixture()
+def setup05():
+    def get_structure(name):
+        if name == "list":
+            return [1, 2, 3]
+        elif name == "tuple":
+            return (1, 3, 4)
+
+    return get_structure
