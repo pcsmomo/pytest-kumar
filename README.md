@@ -407,4 +407,13 @@ Fixture setup02 closing
 - M: module
 - F: function
 
+### 45. Parametrizing from Fixtures(1/2)
+
+```py
+# name the test name using `ids`
+@pytest.fixture(params=[(3, 4), [3, 5]], ids=["tuple", "list"])
+def fixture01(request):
+    return request.param
+```
+
 </details>
