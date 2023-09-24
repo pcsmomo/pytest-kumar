@@ -416,4 +416,37 @@ def fixture01(request):
     return request.param
 ```
 
+### 47. Fixture Scope
+
+[Fixture scope](https://docs.pytest.org/en/6.2.x/fixture.html#fixture-scopes)
+
+Fixtures are created when first requested by a test, and are destroyed based on their scope:
+
+- function (default): the default scope, the fixture is destroyed at the end of the test.
+- class: the fixture is destroyed during teardown of the last test in the class.
+- module (file): the fixture is destroyed during teardown of the last test in the module.
+- package (folder): the fixture is destroyed during teardown of the last test in the package.
+- session: the fixture is destroyed at the end of the test session.
+
+> the Teardown part (after `yield`) will be executed depending on the scope defined
+> the examples are below
+
+```py
+# conftest.py
+@pytest.fixture(scope="module")
+def setup01():
+    wk = pytest.weekdays1.copy()
+    wk.append("thur")
+    yield wk
+    print("\nFixture setup02 closing")
+
+
+@pytest.fixture(scope="session")
+def setup02():
+    wk2 = pytest.weekdays2.copy()
+    wk2.insert(0, "thur")
+    yield wk2
+    print("\nFixture setup02 closing")
+```
+
 </details>

@@ -6,7 +6,7 @@ def pytest_configure():
     pytest.weekdays2 = ["fri", "sat", "sun"]
 
 
-@pytest.fixture()
+@pytest.fixture(scope="module")
 def setup01():
     wk = pytest.weekdays1.copy()
     wk.append("thur")
@@ -14,7 +14,7 @@ def setup01():
     print("\nFixture setup02 closing")
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def setup02():
     wk2 = pytest.weekdays2.copy()
     wk2.insert(0, "thur")
