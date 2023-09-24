@@ -449,4 +449,11 @@ def setup02():
     print("\nFixture setup02 closing")
 ```
 
+### 49. Pass Arguments in Pytest Cmdline
+
+```sh
+pytest -vs py_addoption
+pytest -vs py_addoption --cmdopt Prod
+```
+
 </details>
