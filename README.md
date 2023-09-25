@@ -11,7 +11,11 @@ Python Automation Testing With Pytest by Kumar S
 - Section 5: Pytest: Skip/Mark and Pytest Options
   - `01-pytest-101/py_skip_mark`
 - Section 6: Pytest: Parameterize and Setup/TearDown Tests(Fixtures)
-  - `01-pytest-101/py_fixture_parameterize`
+  - `01-pytest-101/py_parameterize`
+  - `01-pytest-101/py_fixture`
+- Section 7: Pytest: Customizations
+  - `01-pytest-101/py_addoption`
+  - `01-pytest-101/utils`
 
 ## Details
 
@@ -449,11 +453,18 @@ def setup02():
     print("\nFixture setup02 closing")
 ```
 
+## Section 7: Pytest: Customizations
+
 ### 49. Pass Arguments in Pytest Cmdline
 
 ```sh
 pytest -vs py_addoption
 pytest -vs py_addoption --cmdopt Prod
 ```
+
+### 51. Configuring Pytest(1/2)
+
+- [pytest configuration](https://docs.pytest.org/en/stable/reference/customize.html#configuration)
+- [pytest configuration options](https://docs.pytest.org/en/stable/reference/reference.html#configuration-options)
 
 </details>
