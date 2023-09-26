@@ -16,6 +16,7 @@ Python Automation Testing With Pytest by Kumar S
 - Section 7: Pytest: Customizations
   - `01-pytest-101/py_addoption`
   - `01-pytest-101/utils`
+  - `01-pytest-101/py_read_file_config`
 
 ## Details
 
@@ -466,5 +467,38 @@ pytest -vs py_addoption --cmdopt Prod
 
 - [pytest configuration](https://docs.pytest.org/en/stable/reference/customize.html#configuration)
 - [pytest configuration options](https://docs.pytest.org/en/stable/reference/reference.html#configuration-options)
+
+### 54. Using configuration files(1/2)
+
+#### python module attributes
+
+[python attributes tutorial](https://www.tutorialsteacher.com/python/python-module-attributes)
+
+```py
+print(__file__)
+print(__name__)
+print(__package__)
+print(__doc__)
+print(__annotations__)
+print()
+# print(__dict__)
+print(__builtins__)
+print(__cached__)
+print(__loader__)
+# print(__path__)
+
+print("*" * 60)
+print(type(__file__))
+print(type(__name__))
+print(type(__package__))
+print(type(__doc__))
+print(type(__annotations__))
+print()
+# print(type(__dict__))
+print(type(__builtins__))
+print(type(__cached__))
+print(type(__loader__))
+# print(__path__)
+```
 
 </details>

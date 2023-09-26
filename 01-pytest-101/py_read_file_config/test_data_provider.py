@@ -1,5 +1,5 @@
 import pytest
-from .util import get_data
+from utils.util import get_data
 
 
 @pytest.mark.parametrize("a,b,c,d", get_data())
