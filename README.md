@@ -501,4 +501,19 @@ print(type(__loader__))
 # print(__path__)
 ```
 
+### 55. Configuration files(2/2)
+
+[What does the if `__name__ == “__main__”:` do?](https://www.geeksforgeeks.org/what-does-the-if-__name__-__main__-do/)
+
+```py
+# Python program to execute
+# main directly
+print ("Always executed")
+
+if __name__ == "__main__":
+  print ("Executed when invoked directly")
+else:
+  print ("Executed when imported")
+```
+
 </details>
