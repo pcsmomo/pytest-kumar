@@ -516,4 +516,26 @@ else:
   print ("Executed when imported")
 ```
 
+## Section 8: Pytest-BDD
+
+### 57. Intro Pytest-BDD
+
+BDD - Behavioral Drive Development
+
+(analysts or prod owners can get easily involved)
+
+### 58. Pytest-BDD Terms & Rules
+
+- pytest-bdd: not standalone framework (it is a plugin for pytest)
+- Gherkin - .feature file
+  - [Gherkin syntax](https://cucumber.io/docs/gherkin/reference/)
+- Given, When, Then, etc - step is glued to step definition
+- Gherkin steps may also reused by multiple scenarios
+- Only 1 feature is allowed per feature file
+- Multiple Scenarios in a single feature file
+- Test modules remains the same, i.e. starts with `test_`
+- Project structure for pytest-bdd is actually pretty flexible
+- Step definition module names do not need to be the same as feature file names
+- scenarios must be explicitly declared in test modules.
+
 </details>
