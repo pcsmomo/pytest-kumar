@@ -10,6 +10,7 @@ python = "^3.11"
 pytest = "^7.4.2"
 requests = "^2.31.0"
 pytest-watcher = "^0.3.4"
+pytest-bdd = "^6.1.1"
 
 
 [build-system]

@@ -17,6 +17,8 @@ Python Automation Testing With Pytest by Kumar S
   - `01-pytest-101/py_addoption`
   - `01-pytest-101/utils`
   - `01-pytest-101/py_read_file_config`
+- Section 8: Pytest-BDD
+  - `01-pytest-101/bdd_pytest`
 
 ## Details
 
@@ -537,5 +539,9 @@ BDD - Behavioral Drive Development
 - Project structure for pytest-bdd is actually pretty flexible
 - Step definition module names do not need to be the same as feature file names
 - scenarios must be explicitly declared in test modules.
+
+### 59. Write First BDD Test Scenario
+
+[Cucumber (Gherkin) vscode Extension](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete)
 
 </details>
