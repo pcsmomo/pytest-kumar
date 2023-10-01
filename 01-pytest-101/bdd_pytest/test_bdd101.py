@@ -32,3 +32,28 @@ def withdraw_amount():
 @then("the account balance should be 70")
 def final_balance():
     assert pytest.AMT == 70
+
+
+# #### Second scenario
+
+
+@scenario(FEATURE_FILE, "Removal of items from set")
+def test_removalOfItems():
+    pass
+
+
+@given("A set of 3 fruits", target_fixture="myset")
+def current_balance():
+    myset = {"apple", "banana", "cherry"}
+    return myset
+
+
+@when("We remove a fruit from the set")
+def remove_fruit(myset):
+    myset.pop()
+    print(myset)
+
+
+@then("the set will have 2 fruits")
+def final_set(myset):
+    assert len(myset) == 2
