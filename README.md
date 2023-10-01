@@ -544,4 +544,22 @@ BDD - Behavioral Drive Development
 
 [Cucumber (Gherkin) vscode Extension](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete)
 
+### 61. BDD Scenario Decorator (and scenarios)
+
+Two ways to use scenario/scenarios
+
+```py
+from pytest_bdd import scenario, scenarios
+
+# way 2: alternative way to use scenarios instead of @scenario
+scenarios(FEATURE_FILE)
+
+# way 1: using scenario decorator
+@scenario(FEATURE_FILE, "Withdrawal of money")
+def test_withdrawal():
+    """This function runs after all Given-When-Then step definition functions"""
+    print("End Of Wthdrawal test")
+    pass
+```
+
 </details>

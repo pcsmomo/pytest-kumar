@@ -12,6 +12,11 @@ def pytest_configure():  # global variable
     pytest.AMT = 0
 
 
+# way 2: alternative way to use scenarios instead of @scenario
+# scenarios(FEATURE_FILE)
+
+
+# way 1: using scenario decorator
 @scenario(FEATURE_FILE, "Withdrawal of money")
 def test_withdrawal():
     """This function runs after all Given-When-Then step definition functions"""
