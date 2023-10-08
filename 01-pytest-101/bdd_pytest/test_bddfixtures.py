@@ -15,7 +15,22 @@ def setup_set():
     print("\n In fixture... setup() function.. \n")
     countries = {"Poland", "America", "Israel", "Germany", "Canada"}
     # countries = set()
+    # countries = []
     return countries
+
+
+@given("A datatype set")
+def check_set_type(setup_set):
+    print("In background chking set type")
+    if not isinstance(setup_set, set):
+        pytest.xfail("The type is not set type")
+
+
+@given("the set is not empty")
+def check_set_notempty(setup_set):
+    print("In background cheking non-empty set")
+    if len(setup_set) == 0:
+        pytest.xfail("The set of elems is empty")
 
 
 @given("A set with 3 elements", target_fixture="setup_set1")
