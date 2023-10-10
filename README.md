@@ -562,4 +562,12 @@ def test_withdrawal():
     pass
 ```
 
+### 69. Pytest Tags & BDD
+
+```sh
+# 01-pytest-101/bdd_pytest
+pytest -k bddparam
+pytest -k bddscenario
+```
+
 </details>
