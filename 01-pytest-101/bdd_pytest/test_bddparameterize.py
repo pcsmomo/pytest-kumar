@@ -37,8 +37,14 @@ def count_increases(fruits, count):
     assert len(fruits) == count
 
 
+############# End of First Scenario #############
+
+pytest.total_fruits = 0
+
+
 @given(parsers.parse("Given there are {count:d} fruits"), target_fixture="start_fruits")
 def existing_fruits(count):
+    pytest.total_fruits = count
     return dict(start=count, eat=0)
 
 
@@ -50,4 +56,5 @@ def eat_fruits(start_fruits, eat):
 
 @then(parsers.parse("I should have {left:d} fruits"))
 def should_have_left_fruits(start_fruits, left):
-    assert start_fruits["start"] - start_fruits["eat"] == left
+    # assert start_fruits["start"] - start_fruits["eat"] == left
+    assert pytest.total_fruits - start_fruits["eat"] == left
