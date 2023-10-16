@@ -570,4 +570,16 @@ pytest -k bddparam
 pytest -k bddscenario
 ```
 
+### Extras
+
+```sh
+# Show extra test summary info as specified by chars:
+# (f)ailed, (E)rror, (s)kipped, (x)failed, (X)passed,
+# (p)assed, (P)assed with output, (a)ll except passed
+# (p/P), or (A)ll. (w)arnings are enabled by default (see
+# --disable-warnings), 'N' can be used to reset the list.
+# (default: 'fE').
+pytest -rP
+```
+
 </details>
